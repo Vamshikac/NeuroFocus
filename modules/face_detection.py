@@ -4,11 +4,15 @@ import time
 import os
 
 # Model file location
-# Get the folder where this Python file is located
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Locate the main NeuroFocus folder
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
 
-# Locate the model file inside that folder
-MODEL_PATH = os.path.join(BASE_DIR, "face_landmarker.task")
+# Locate the model inside the models folder
+MODEL_PATH = os.path.join(
+    BASE_DIR, "models", "face_landmarker.task"
+)
 
 if not os.path.exists(MODEL_PATH):
     print("Model file not found!")

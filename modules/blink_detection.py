@@ -9,9 +9,13 @@ import math
 # MODEL FILE LOCATION
 # -------------------------------
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "face_landmarker.task")
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
 
+MODEL_PATH = os.path.join(
+    BASE_DIR, "models", "face_landmarker.task"
+)
 if not os.path.exists(MODEL_PATH):
     print("Model file not found!")
     print("Looking at:", MODEL_PATH)

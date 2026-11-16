@@ -35,6 +35,8 @@ while camera.isOpened():
     if not success:
         break
 
+    frame = cv2.flip(frame, 1)
+
     height, width, _ = frame.shape
 
     rgb_frame = cv2.cvtColor(
